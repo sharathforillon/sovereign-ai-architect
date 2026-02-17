@@ -13,7 +13,7 @@ const HeroSection = () => {
           className="h-full w-full object-cover opacity-60"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
       </div>
 
       {/* Grid overlay */}
@@ -58,7 +58,7 @@ const HeroSection = () => {
           className="mx-auto mt-6 max-w-2xl font-body text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
           IP-driven AI strategy for UAE Government entities and enterprises.
-          From regulatory compliance to measurable value — grounded in
+          From regulatory compliance to measurable value. Grounded in
           execution certainty, not hype.
         </motion.p>
 
