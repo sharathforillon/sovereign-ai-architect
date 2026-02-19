@@ -8,6 +8,7 @@ import KillChainSection from "@/components/KillChainSection";
 import SovereigntySection from "@/components/SovereigntySection";
 import DeliverablesSection from "@/components/DeliverablesSection";
 import ServicesSection from "@/components/ServicesSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
         <SovereigntySection />
         <DeliverablesSection />
         <ServicesSection />
+        <FAQSection />
       </main>
       <Footer />
     </div>
