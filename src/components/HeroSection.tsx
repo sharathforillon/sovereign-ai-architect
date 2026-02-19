@@ -88,12 +88,13 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="mx-auto mt-20 grid max-w-3xl grid-cols-3 gap-8"
+          className="mx-auto mt-20 grid max-w-4xl grid-cols-2 gap-8 sm:grid-cols-4"
         >
           {[
             { value: "250+", label: "Diagnostic Touch Points" },
-            { value: "$1M+", label: "Leakage Discovery" },
-            { value: "72hr", label: "Incident Reporting" },
+            { value: "14", label: "Day Fixed-Scope Sprint" },
+            { value: "5", label: "Non-Negotiable Pillars" },
+            { value: "6", label: "Kill Chain Stages" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-display text-3xl font-bold text-primary md:text-4xl">
