@@ -4,8 +4,11 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "SAEF Framework", href: "#saef" },
-  { label: "Sovereignty & Law", href: "#sovereignty" },
-  { label: "Services", href: "#services" },
+  { label: "14-Day Engagement", href: "#engagement" },
+  { label: "Five Pillars", href: "#pillars" },
+  { label: "Kill Chain", href: "#killchain" },
+  { label: "Sovereignty", href: "#sovereignty" },
+  { label: "Deliverables", href: "#deliverables" },
   { label: "Contact", href: "#contact" },
 ];
 

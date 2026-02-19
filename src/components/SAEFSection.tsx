@@ -8,37 +8,37 @@ const pillars = [
     icon: Search,
     title: "Technical Debt & Data Architecture",
     description:
-      "Deep audit of data pipelines, model infrastructure, and integration debt across your AI stack.",
+      "Deep audit of data pipelines, model infrastructure, and integration debt across your AI stack. Identifies jurisdiction, classification, and residency gaps.",
   },
   {
     icon: ShieldCheck,
     title: "Governance Maturity & Bias Mitigation",
     description:
-      "Assess policy frameworks, ethical guardrails, and algorithmic fairness across all deployment tiers.",
+      "Assess policy frameworks, ethical guardrails, and algorithmic fairness. Controls verified against artifacts and system evidence, not policy documents.",
   },
   {
     icon: DollarSign,
     title: "$1M+ Leakage Point Discovery",
     description:
-      "High-velocity ROI identification — uncover hidden cost sinks and revenue opportunities in existing AI systems.",
+      "High-velocity ROI identification. Uncover hidden cost sinks, revenue opportunities, and quantified business friction in existing AI systems.",
   },
   {
     icon: Brain,
     title: "Explainable & Ethical AI",
     description:
-      'USPTO-patented Human-Robot Symbiosis ensures "Sovereign-in-the-Loop" (SGiL) governance for all AI agents.',
+      "USPTO-patented Human-Robot Symbiosis ensures Sovereign-in-the-Loop (SGiL) governance. Every decision path must be forensically reconstructible.",
   },
   {
     icon: Fingerprint,
     title: "Sovereign Governance-in-the-Loop",
     description:
-      "Prevent black-box decision-making in public services with patented SGiL framework for full auditability.",
+      "Prevent black-box decision-making in public services. Patented SGiL framework ensures full auditability and named executive accountability.",
   },
   {
     icon: BarChart3,
     title: "Pre-Deployment Algorithm Audit",
     description:
-      "Mandatory Tier 3 system audits aligned with the UAE AI Act 2026 before any production deployment.",
+      "Mandatory Tier 3 system audits aligned with the UAE AI Act 2026 before any production deployment. Evidence-driven, not advisory.",
   },
 ];
 
@@ -59,16 +59,18 @@ const SAEFSection = () => {
           className="mb-16 text-center"
         >
           <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Proprietary IP
+            Proprietary IP · USPTO-Granted Patents
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
             SAEF — Sovereign AI
             <br />
             <span className="text-gradient-gold">Enablement Framework</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-xl font-body text-base text-muted-foreground">
-            The 250-Point Sovereign Scorecard — the gold standard for AI readiness.
-            A diagnostic engine built on USPTO-granted patents.
+          <p className="mx-auto mt-4 max-w-2xl font-body text-base text-muted-foreground">
+            The 250-Point Sovereign Scorecard is the gold standard for AI
+            readiness. A diagnostic engine built on USPTO-granted patents that
+            determines whether AI can be legally defended, institutionally
+            controlled, and safely scaled.
           </p>
           <div className="gold-line mx-auto mt-6 w-20 rounded-full" />
         </motion.div>
@@ -95,6 +97,27 @@ const SAEFSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Engagement type callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.9, duration: 0.5 }}
+          className="mt-12 grid gap-6 md:grid-cols-3"
+        >
+          <div className="glass-card rounded-xl p-6 text-center">
+            <p className="font-display text-2xl font-bold text-primary">14</p>
+            <p className="mt-1 font-body text-xs text-muted-foreground">Calendar Day Sprint</p>
+          </div>
+          <div className="glass-card rounded-xl p-6 text-center">
+            <p className="font-display text-2xl font-bold text-primary">250+</p>
+            <p className="mt-1 font-body text-xs text-muted-foreground">Diagnostic Touch Points</p>
+          </div>
+          <div className="glass-card rounded-xl p-6 text-center">
+            <p className="font-display text-2xl font-bold text-primary">0</p>
+            <p className="mt-1 font-body text-xs text-muted-foreground">Vendor Bias or Commercial Conflicts</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
