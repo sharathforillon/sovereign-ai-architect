@@ -34,7 +34,7 @@ const faqCategories = [
     questions: [
       {
         q: "What does the 250-Point Sovereign Scorecard assess?",
-        a: "The Scorecard is a forensic diagnostic engine that audits five non-negotiable pillars: Decision Authority & Delegation Integrity, Data Sovereignty & Jurisdictional Compliance, Model Governance & Lifecycle Control, Institutional Accountability & Liability Architecture, and Regulatory & Ethical Alignment. Each pillar is scored across 50+ touchpoints with binary pass/fail evidence requirements.",
+        a: "The SAEF™ Scorecard is a forensic diagnostic engine that audits five non-negotiable pillars: Decision Authority & Delegation Integrity, Data Sovereignty & Jurisdictional Compliance, Model Governance & Lifecycle Control, Institutional Accountability & Liability Architecture, and Regulatory & Ethical Alignment. Each pillar is scored across 50+ touchpoints with binary pass/fail evidence requirements.",
       },
       {
         q: "How is this different from an AI maturity model?",
@@ -46,7 +46,7 @@ const faqCategories = [
       },
       {
         q: "What is 'Sovereign Governance-in-the-Loop' (SGiL)?",
-        a: "SGiL is our USPTO-patented framework that prevents 'Black Box' decision-making in public services. It ensures every AI-driven decision can be explained, halted, reversed, and attributed to a human authority. This is not optional under the UAE AI Act 2026 for Tier 3 and Tier 4 systems.",
+        a: "SGiL is our USPTO-patented framework within SAEF™ that prevents 'Black Box' decision-making in public services. It ensures every AI-driven decision can be explained, halted, reversed, and attributed to a human authority. This is not optional under the UAE AI Act 2026 for Tier 3 and Tier 4 systems.",
       },
     ],
   },

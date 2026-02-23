@@ -99,7 +99,7 @@ const DeliverablesSection = () => {
           className="mb-16 text-center"
         >
           <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            What You Receive
+            SAEF™ Deliverables
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
             Executive
