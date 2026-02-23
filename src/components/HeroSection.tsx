@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, Award, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -10,14 +11,14 @@ const HeroSection = () => {
         <img
           src={heroBg}
           alt="Digital twin visualization of UAE"
-          className="h-full w-full object-cover opacity-60"
+          className="h-full w-full object-cover opacity-50"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background" />
       </div>
 
       {/* Grid overlay */}
-      <div className="particle-grid absolute inset-0 opacity-30" />
+      <div className="particle-grid absolute inset-0 opacity-20" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 text-center lg:px-12">
@@ -69,18 +70,18 @@ const HeroSection = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
-          <a
-            href="#saef"
+          <Link
+            to="/framework"
             className="rounded-lg bg-primary px-8 py-3.5 font-body text-sm font-semibold tracking-wide text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/30"
           >
-            Explore the SAEF Framework
-          </a>
-          <a
-            href="#sovereignty"
+            Explore the SAEF™ Framework
+          </Link>
+          <Link
+            to="/compliance"
             className="rounded-lg border border-border px-8 py-3.5 font-body text-sm font-semibold tracking-wide text-foreground transition-all hover:border-primary/40 hover:text-primary"
           >
             UAE AI Act 2026 Compliance
-          </a>
+          </Link>
         </motion.div>
 
         {/* Stats */}

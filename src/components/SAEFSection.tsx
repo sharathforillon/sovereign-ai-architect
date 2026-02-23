@@ -62,7 +62,7 @@ const SAEFSection = () => {
             Proprietary IP · USPTO-Granted Patents
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-5xl">
-            SAEF — Sovereign AI
+            SAEF™ — Sovereign AI
             <br />
             <span className="text-gradient-gold">Enablement Framework</span>
           </h2>

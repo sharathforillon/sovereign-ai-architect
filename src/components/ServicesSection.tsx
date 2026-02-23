@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Compass, FlaskConical, Languages, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -10,7 +11,7 @@ const services = [
     description:
       "Proof-Stage AI engagements that move your organization from pilot fatigue to enterprise-grade, ROI-driven AI deployment.",
     features: [
-      "250-Point Sovereign Scorecard Assessment",
+      "SAEF™ 250-Point Sovereign Scorecard Assessment",
       "AI Maturity Roadmap & Gap Analysis",
       "Executive Alignment Workshops",
     ],
@@ -46,7 +47,7 @@ const ServicesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="section-padding relative">
+    <section className="section-padding relative">
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/10 via-background to-background" />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-6xl">
@@ -64,7 +65,7 @@ const ServicesSection = () => {
             <span className="text-gradient-gold"> Service Modules</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-body text-base text-muted-foreground">
-            Execution certainty across the full AI lifecycle — strategy,
+            Execution certainty across the full AI lifecycle. Strategy,
             compliance, and culturally aligned deployment.
           </p>
           <div className="gold-line mx-auto mt-6 w-20 rounded-full" />
@@ -102,12 +103,12 @@ const ServicesSection = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="mt-6 inline-flex items-center gap-2 font-body text-sm font-medium text-primary transition-all hover:gap-3"
               >
                 Learn More <ArrowRight size={14} />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
