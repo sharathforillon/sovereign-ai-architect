@@ -7,8 +7,8 @@ import {
   Building2,
   HeartPulse,
   ShoppingCart,
-  DollarSign,
-  TrendingDown,
+  Shield,
+  Lock,
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -16,42 +16,51 @@ import { Link } from "react-router-dom";
 const industries = [
   {
     icon: Landmark,
-    title: "Government",
+    title: "Government & Defense",
     metrics: ["100% decision auditability", "Zero cross-border risk"],
     description:
       "Full sovereign control over AI decision-making in public services. SGiL framework ensures every government AI action is explainable, reversible, and attributable.",
+    useCases: [
+      "National Intelligence: Securely process classified data with localized LLMs.",
+      "Citizen Services: Deploy AI-driven public portals that guarantee citizen data privacy.",
+      "Economic Stability: Build domestic AI capacity to ensure technological sovereignty.",
+    ],
+  },
+  {
+    icon: Building2,
+    title: "Enterprise & Finance",
+    metrics: ["68% OPEX reduction", "PDPL compliance", "Real-time explainability"],
+    description:
+      "Automated underwriting with full explainability artifacts. Every credit decision forensically reconstructible for regulatory defense.",
+    useCases: [
+      "IP Protection: Train models on proprietary R&D without feeding public AI systems.",
+      "Compliance by Design: Meet SOC2, HIPAA, and internal audit requirements out of the box.",
+      "Operational Continuity: Ensure 99.99% uptime through localized, air-gapped infrastructure.",
+    ],
   },
   {
     icon: Radio,
     title: "Telecommunications",
-    metrics: [
-      "12× throughput improvement",
-      "Lower latency",
-      "Sovereign LLM workloads",
-    ],
+    metrics: ["12× throughput improvement", "Sovereign LLM workloads"],
     description:
       "Sovereign compute infrastructure for real-time AI workloads. Local inference eliminates cross-border data dependency and volatile API costs.",
-  },
-  {
-    icon: Building2,
-    title: "Banking & Financial Services",
-    metrics: [
-      "68% OPEX reduction",
-      "PDPL compliance",
-      "Real-time explainability",
+    useCases: [
+      "Network Optimization: AI-driven capacity planning within sovereign compute.",
+      "Customer Intelligence: Private customer analytics with zero data leakage.",
+      "Supply Chain: Resilient logistics AI that functions during global network disruptions.",
     ],
-    description:
-      "Automated underwriting with full explainability artifacts. Every credit decision forensically reconstructible for regulatory defense.",
   },
   {
     icon: HeartPulse,
     title: "Healthcare",
-    metrics: [
-      "Liability containment via traceability",
-      "Clinical oversight loops",
-    ],
+    metrics: ["Liability containment via traceability", "Clinical oversight loops"],
     description:
       "AI-assisted diagnostics with mandatory human-in-the-loop for Tier 1 clinical decisions. Full chain-of-thought logging for patient safety.",
+    useCases: [
+      "Diagnostic Support: Localized AI models trained on regional patient data.",
+      "Drug Discovery: Proprietary research protection with air-gapped compute.",
+      "Compliance: HIPAA-grade audit trails for every AI recommendation.",
+    ],
   },
   {
     icon: ShoppingCart,
@@ -59,30 +68,28 @@ const industries = [
     metrics: ["Model drift control", "Safe personalization"],
     description:
       "AI-driven personalization with built-in drift detection and cost governors. Every recommendation traceable and reversible.",
+    useCases: [
+      "Customer-Facing AI: Personalization that doesn't leak trade secrets.",
+      "Internal Knowledge: Private knowledge management across operations.",
+      "Cost Control: Shift from per-token spend to predictable owned inference.",
+    ],
   },
 ];
 
 const tokenomicsData = [
-  {
-    metric: "Annual Token Spend",
-    without: "Volatile, uncapped",
-    with: "Predictable, governed",
-  },
-  {
-    metric: "Primary Cost Driver",
-    without: "Uncapped API Volume",
-    with: "Fixed Sovereign Compute",
-  },
-  {
-    metric: "Data Liability",
-    without: "100% Exposure",
-    with: "Zero Exposure",
-  },
-  {
-    metric: "IP Ownership",
-    without: "Vendor-Owned",
-    with: "Enterprise-Owned",
-  },
+  { metric: "Annual Token Spend", without: "Volatile, uncapped", with: "Predictable, governed" },
+  { metric: "Primary Cost Driver", without: "Uncapped API Volume", with: "Fixed Sovereign Compute" },
+  { metric: "Data Liability", without: "100% Exposure", with: "Zero Exposure" },
+  { metric: "IP Ownership", without: "Vendor-Owned", with: "Enterprise-Owned" },
+  { metric: "Exit Strategy", without: "Vendor Lock-in", with: "Full Code Ownership / Export" },
+];
+
+const comparisonData = [
+  { metric: "Data Residency", publicAI: "US/China-based servers", sovereign: "Your infrastructure (on-prem/private cloud)" },
+  { metric: "Model Control", publicAI: "Vendor-controlled updates", sovereign: "Full weight & checkpoint ownership" },
+  { metric: "API Dependency", publicAI: "100% external dependency", sovereign: "Zero outbound dependency" },
+  { metric: "Cost Model", publicAI: "Per-token / unpredictable", sovereign: "Fixed TCO / predictable" },
+  { metric: "Compliance", publicAI: "Manual / post-hoc", sovereign: "By Design (SOC2, HIPAA, GDPR)" },
 ];
 
 const IndustriesPage = () => {
@@ -90,6 +97,8 @@ const IndustriesPage = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const tokenRef = useRef(null);
   const tokenInView = useInView(tokenRef, { once: true, margin: "-80px" });
+  const compRef = useRef(null);
+  const compInView = useInView(compRef, { once: true, margin: "-80px" });
 
   return (
     <PageLayout>
@@ -100,7 +109,7 @@ const IndustriesPage = () => {
           <div className="particle-grid absolute inset-0 opacity-20" />
           <div className="relative z-10">
             <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              Multi-Industry Value Models
+              Sector-Specific Solutions
             </span>
             <h1 className="mt-4 font-display text-4xl font-bold text-foreground md:text-6xl">
               Sovereignty Delivers
@@ -108,9 +117,9 @@ const IndustriesPage = () => {
               <span className="text-gradient-gold">Measurable ROI</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl font-body text-lg text-muted-foreground">
-              Different industries. Same sovereignty logic. Same transformation
-              opportunity. SAEF™ adapts to sector-specific regulatory and
-              operational requirements.
+              Leaders think in terms of their own vertical. SAEF™ adapts to
+              sector-specific regulatory and operational requirements with
+              quantifiable outcomes.
             </p>
             <div className="gold-line mx-auto mt-8 w-20 rounded-full" />
           </div>
@@ -134,15 +143,23 @@ const IndustriesPage = () => {
                   <h3 className="font-display text-xl font-semibold text-foreground">
                     {ind.title}
                   </h3>
-                  <p className="mt-3 flex-1 font-body text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-3 font-body text-sm leading-relaxed text-muted-foreground">
                     {ind.description}
                   </p>
-                  <ul className="mt-5 space-y-2 border-t border-border pt-5">
+                  <ul className="mt-4 space-y-2">
+                    {ind.useCases.map((uc) => (
+                      <li key={uc} className="flex items-start gap-2 font-body text-xs text-muted-foreground">
+                        <div className="gold-dot mt-1 shrink-0" />
+                        <span>
+                          <strong className="text-foreground">{uc.split(":")[0]}:</strong>
+                          {uc.split(":").slice(1).join(":")}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul className="mt-auto space-y-2 border-t border-border pt-5">
                     {ind.metrics.map((m) => (
-                      <li
-                        key={m}
-                        className="flex items-center gap-2 font-body text-xs font-medium text-foreground"
-                      >
+                      <li key={m} className="flex items-center gap-2 font-body text-xs font-medium text-foreground">
                         <div className="gold-dot shrink-0" />
                         {m}
                       </li>
@@ -150,6 +167,48 @@ const IndustriesPage = () => {
                   </ul>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Public vs Sovereign Comparison */}
+        <section className="section-padding relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background" />
+          <div ref={compRef} className="relative z-10 mx-auto max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={compInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="mb-12 text-center"
+            >
+              <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                Head-to-Head
+              </span>
+              <h2 className="mt-4 font-display text-2xl font-bold text-foreground md:text-3xl">
+                Public Cloud AI vs.
+                <span className="text-gradient-gold"> Sovereign AI</span>
+              </h2>
+            </motion.div>
+
+            <div className="overflow-hidden rounded-xl border border-border">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-border bg-secondary/30">
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-muted-foreground">Metric</th>
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-destructive">Public Cloud AI</th>
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-primary">Sovereign AI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row) => (
+                    <tr key={row.metric} className="border-b border-border">
+                      <td className="px-6 py-4 font-body text-sm font-medium text-foreground">{row.metric}</td>
+                      <td className="px-6 py-4 font-body text-sm text-muted-foreground">{row.publicAI}</td>
+                      <td className="px-6 py-4 font-body text-sm text-primary">{row.sovereign}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
@@ -172,8 +231,7 @@ const IndustriesPage = () => {
                 <span className="text-gradient-gold"> Tokenomics</span>
               </h2>
               <p className="mt-3 font-body text-sm text-muted-foreground">
-                Tokenomics is the new cloud bill shock. Except it scales 100×
-                faster.
+                Tokenomics is the new cloud bill shock. Except it scales 100× faster.
               </p>
             </motion.div>
 
@@ -181,44 +239,22 @@ const IndustriesPage = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-border bg-secondary/30">
-                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                      Metric
-                    </th>
-                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-destructive">
-                      Without Governance
-                    </th>
-                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-primary">
-                      With Sovereignty
-                    </th>
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-muted-foreground">Metric</th>
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-destructive">Without Governance</th>
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-primary">With Sovereignty</th>
                   </tr>
                 </thead>
                 <tbody>
                   {tokenomicsData.map((row) => (
                     <tr key={row.metric} className="border-b border-border">
-                      <td className="px-6 py-4 font-body text-sm font-medium text-foreground">
-                        {row.metric}
-                      </td>
-                      <td className="px-6 py-4 font-body text-sm text-muted-foreground">
-                        {row.without}
-                      </td>
-                      <td className="px-6 py-4 font-body text-sm text-primary">
-                        {row.with}
-                      </td>
+                      <td className="px-6 py-4 font-body text-sm font-medium text-foreground">{row.metric}</td>
+                      <td className="px-6 py-4 font-body text-sm text-muted-foreground">{row.without}</td>
+                      <td className="px-6 py-4 font-body text-sm text-primary">{row.with}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={tokenInView ? { opacity: 1 } : {}}
-              transition={{ delay: 0.5 }}
-              className="mt-6 text-center font-body text-sm italic text-muted-foreground"
-            >
-              The enterprises that survive will be the ones that control their
-              token flows, not the ones that add more LLM features.
-            </motion.p>
           </div>
         </section>
 
@@ -235,7 +271,7 @@ const IndustriesPage = () => {
               to="/contact"
               className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20"
             >
-              Request Briefing <ArrowRight size={14} />
+              Request Strategy Briefing <ArrowRight size={14} />
             </Link>
           </div>
         </section>
