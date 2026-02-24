@@ -1,11 +1,14 @@
 import PageLayout from "@/components/PageLayout";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
+import SovereigntyPillarsSection from "@/components/SovereigntyPillarsSection";
+import SovereignShieldSection from "@/components/SovereignShieldSection";
 import ServicesSection from "@/components/ServicesSection";
+import FAQSection from "@/components/FAQSection";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Award, Search, Cpu, FileText } from "lucide-react";
+import { ArrowRight, Shield, Search, Cpu, FileText } from "lucide-react";
 
 const highlights = [
   {
@@ -42,6 +45,8 @@ const Index = () => {
     <PageLayout>
       <HeroSection />
       <ProblemSection />
+      <SovereigntyPillarsSection />
+      <SovereignShieldSection />
 
       {/* Quick Navigation Cards */}
       <section className="section-padding relative">
@@ -96,6 +101,25 @@ const Index = () => {
       </section>
 
       <ServicesSection />
+      <FAQSection />
+
+      {/* Final CTA */}
+      <section className="section-padding">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-primary/5 p-12 text-center">
+          <h3 className="font-display text-2xl font-bold text-foreground">
+            Ready to Own Your AI Future?
+          </h3>
+          <p className="mt-3 font-body text-sm text-muted-foreground">
+            Request a confidential strategy briefing with our lead architects.
+          </p>
+          <Link
+            to="/contact"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-body text-sm font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20"
+          >
+            Request Strategy Briefing <ArrowRight size={14} />
+          </Link>
+        </div>
+      </section>
     </PageLayout>
   );
 };

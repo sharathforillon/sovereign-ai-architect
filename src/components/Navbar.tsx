@@ -69,7 +69,7 @@ const Navbar = () => {
             to="/contact"
             className="rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20"
           >
-            Request Assessment
+            Request Strategy Briefing
           </Link>
         </div>
 
@@ -109,7 +109,7 @@ const Navbar = () => {
                 to="/contact"
                 className="rounded-lg bg-primary px-5 py-2.5 text-center font-body text-sm font-semibold text-primary-foreground"
               >
-                Request Assessment
+                Request Strategy Briefing
               </Link>
             </div>
           </motion.div>

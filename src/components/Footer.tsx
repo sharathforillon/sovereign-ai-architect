@@ -1,9 +1,27 @@
 import { Link } from "react-router-dom";
-import { MapPin, ArrowUpRight } from "lucide-react";
+import { MapPin, ArrowUpRight, Shield, Lock, CheckCircle } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="border-t border-border">
+      {/* Sovereignty Guarantee */}
+      <div className="border-b border-border bg-primary/5">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 px-6 py-4 lg:px-12">
+          <span className="flex items-center gap-2 font-body text-xs font-medium text-foreground">
+            <Shield size={12} className="text-primary" />
+            No data is sent to OpenAI, Anthropic, or Google. Ever.
+          </span>
+          <span className="flex items-center gap-2 font-body text-xs text-muted-foreground">
+            <Lock size={12} className="text-primary" />
+            Full Code Ownership &amp; Export
+          </span>
+          <span className="flex items-center gap-2 font-body text-xs text-muted-foreground">
+            <CheckCircle size={12} className="text-primary" />
+            SOC2 · ISO 27001 · GDPR Ready
+          </span>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
@@ -17,7 +35,9 @@ const Footer = () => {
               </span>
             </Link>
             <p className="mt-3 font-body text-xs text-muted-foreground">
-              IP-driven AI strategy for UAE Government entities and enterprises.
+              We design Sovereign AI systems for Government and Enterprise that
+              ensure total data privacy, eliminate vendor lock-in, and maintain
+              operational continuity.
             </p>
             <span className="mt-3 flex items-center gap-1.5 font-body text-xs text-muted-foreground">
               <MapPin size={12} className="text-primary" />
@@ -61,7 +81,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/industries" className="font-body text-xs text-muted-foreground hover:text-primary">
-                  Industry Models
+                  Industry Solutions
                 </Link>
               </li>
               <li>
@@ -79,7 +99,7 @@ const Footer = () => {
             <ul className="mt-3 space-y-2">
               <li>
                 <Link to="/contact" className="font-body text-xs text-muted-foreground hover:text-primary">
-                  Request Briefing
+                  Request Strategy Briefing
                 </Link>
               </li>
               <li>
@@ -94,7 +114,7 @@ const Footer = () => {
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 md:flex-row">
           <span className="font-body text-xs text-muted-foreground">
             © 2026 Sovereign Intelligence. All rights reserved. SAEF™ is a
-            trademark of Sovereign Intelligence.
+            trademark of Sovereign Intelligence. Built on open-source excellence.
           </span>
           <div className="flex items-center gap-4">
             <a
