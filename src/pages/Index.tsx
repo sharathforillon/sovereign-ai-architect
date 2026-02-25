@@ -1,8 +1,10 @@
 import PageLayout from "@/components/PageLayout";
 import HeroSection from "@/components/HeroSection";
+import ValuePillarsBar from "@/components/ValuePillarsBar";
 import ProblemSection from "@/components/ProblemSection";
 import SovereigntyPillarsSection from "@/components/SovereigntyPillarsSection";
 import SovereignShieldSection from "@/components/SovereignShieldSection";
+import ZeroTrustDiagram from "@/components/ZeroTrustDiagram";
 import ServicesSection from "@/components/ServicesSection";
 import FAQSection from "@/components/FAQSection";
 import { motion, useInView } from "framer-motion";
@@ -44,9 +46,11 @@ const Index = () => {
   return (
     <PageLayout>
       <HeroSection />
+      <ValuePillarsBar />
       <ProblemSection />
       <SovereigntyPillarsSection />
       <SovereignShieldSection />
+      <ZeroTrustDiagram />
 
       {/* Quick Navigation Cards */}
       <section className="section-padding relative">
