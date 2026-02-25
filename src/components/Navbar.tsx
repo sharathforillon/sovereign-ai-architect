@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const navItems = [
   { label: "SAEF™ Framework", href: "/framework" },
@@ -15,6 +16,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const { lang, setLang } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -65,6 +67,15 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
+
+          {/* Language Toggle */}
+          <button
+            onClick={() => setLang(lang === "en" ? "ar" : "en")}
+            className="rounded-lg border border-border px-3 py-1.5 font-body text-xs font-semibold tracking-wide text-foreground transition-all hover:border-primary/40 hover:text-primary"
+          >
+            {lang === "en" ? "عربي" : "EN"}
+          </button>
+
           <Link
             to="/contact"
             className="rounded-lg bg-primary px-5 py-2.5 font-body text-sm font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20"
@@ -105,6 +116,12 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
+              <button
+                onClick={() => setLang(lang === "en" ? "ar" : "en")}
+                className="rounded-lg border border-border px-3 py-2 font-body text-sm font-semibold text-foreground"
+              >
+                {lang === "en" ? "عربي" : "EN"}
+              </button>
               <Link
                 to="/contact"
                 className="rounded-lg bg-primary px-5 py-2.5 text-center font-body text-sm font-semibold text-primary-foreground"
