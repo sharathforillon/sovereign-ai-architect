@@ -60,29 +60,29 @@ const HeroSection = () => {
           transition={{ delay: 0.4, duration: 0.7 }}
           className="font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          Build AI Infrastructure
+          Sovereign AI. From
           <br />
-          <span className="text-gradient-gold">That You Own, Not Rent.</span>
+          <span className="text-gradient-gold">Strategy to Operations.</span>
         </motion.h1>
 
-        {/* Sub — executive-level, GCC RFP language */}
+        {/* Sub — executive-level, full lifecycle messaging */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
           className="mx-auto mt-6 max-w-3xl font-body text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
-          Sovereign AI systems engineered for national data residency,
-          regulatory supremacy, and operational continuity. Purpose-built for
-          Government and Enterprise across the GCC.
+          End-to-end AI strategy, roadmap, implementation, and governance,
+          engineered for national data residency and regulatory supremacy.
+          Purpose-built for Government and Enterprise across the GCC.
         </motion.p>
 
-        {/* Streamlined CTAs — primary solid, secondary text link */}
+        {/* CTAs — primary solid, secondary outlined with glow */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-10 flex flex-col items-center gap-5 sm:flex-row sm:justify-center"
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
           <Link
             to="/contact"
@@ -92,9 +92,10 @@ const HeroSection = () => {
           </Link>
           <Link
             to="/framework"
-            className="inline-flex items-center gap-2 font-body text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            className="group inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-7 py-3.5 font-body text-sm font-semibold text-primary shadow-md shadow-primary/10 transition-all hover:border-primary/70 hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/20"
           >
-            Explore the SAEF™ Framework <ArrowRight size={14} />
+            Explore the SAEF™ Framework
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>
 
