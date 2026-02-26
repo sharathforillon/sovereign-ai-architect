@@ -72,10 +72,10 @@ const SovereignShieldSection = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="rounded-xl border border-destructive/20 bg-destructive/5 p-8"
+            className="rounded-xl border border-muted-foreground/20 bg-muted/30 p-8"
           >
             <div className="mb-4 flex items-center gap-3">
-              <AlertTriangle size={20} className="text-destructive" />
+              <AlertTriangle size={20} className="text-muted-foreground" />
               <h3 className="font-display text-lg font-semibold text-foreground">
                 Traditional AI
               </h3>
@@ -83,11 +83,11 @@ const SovereignShieldSection = () => {
             <div className="flex flex-col gap-3">
               {beforeSteps.map((step, i) => (
                 <div key={step} className="flex items-center gap-3">
-                  <span className="rounded-lg border border-destructive/20 bg-destructive/10 px-3 py-2 font-body text-sm text-foreground">
+                  <span className="rounded-lg border border-muted-foreground/20 bg-muted/40 px-3 py-2 font-body text-sm text-foreground">
                     {step}
                   </span>
                   {i < beforeSteps.length - 1 && (
-                    <ArrowRight size={16} className="text-destructive" />
+                    <ArrowRight size={16} className="text-muted-foreground" />
                   )}
                 </div>
               ))}

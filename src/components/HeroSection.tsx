@@ -60,9 +60,9 @@ const HeroSection = () => {
           transition={{ delay: 0.4, duration: 0.7 }}
           className="font-display text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          Sovereign AI. From
+          Your AI. Your Infrastructure.
           <br />
-          <span className="text-gradient-gold">Strategy to Operations.</span>
+          <span className="text-gradient-gold">Your Competitive Advantage.</span>
         </motion.h1>
 
         {/* Sub — executive-level, full lifecycle messaging */}
@@ -72,9 +72,10 @@ const HeroSection = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="mx-auto mt-6 max-w-3xl font-body text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
-          End-to-end AI strategy, roadmap, implementation, and governance,
-          engineered for national data residency and regulatory supremacy.
-          Purpose-built for Government and Enterprise across the GCC.
+          We help governments and enterprises own their AI future. From strategy
+          and roadmap to full implementation and ongoing governance, we deliver
+          sovereign AI systems that keep your data in-country and your
+          operations ahead of regulation.
         </motion.p>
 
         {/* CTAs — primary solid, secondary outlined with glow */}
