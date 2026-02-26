@@ -195,7 +195,7 @@ const IndustriesPage = () => {
                 <thead>
                   <tr className="border-b border-border bg-secondary/30">
                     <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-muted-foreground">Metric</th>
-                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-destructive">Public Cloud AI</th>
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-muted-foreground">Public Cloud AI</th>
                     <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-primary">Sovereign AI</th>
                   </tr>
                 </thead>
@@ -240,7 +240,7 @@ const IndustriesPage = () => {
                 <thead>
                   <tr className="border-b border-border bg-secondary/30">
                     <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-muted-foreground">Metric</th>
-                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-destructive">Without Governance</th>
+                    <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-muted-foreground">Without Governance</th>
                     <th className="px-6 py-4 text-left font-body text-xs font-semibold uppercase tracking-wider text-primary">With Sovereignty</th>
                   </tr>
                 </thead>

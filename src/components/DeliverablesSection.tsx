@@ -180,7 +180,7 @@ const DeliverablesSection = () => {
                     <tr
                       key={t.tier}
                       className={`border-b border-border ${
-                        i === 0 ? "bg-destructive/5" : ""
+                        i === 0 ? "bg-muted/30" : ""
                       }`}
                     >
                       <td className="px-5 py-4 font-display text-sm font-bold text-primary">
