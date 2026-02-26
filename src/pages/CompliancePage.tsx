@@ -124,7 +124,7 @@ const CompliancePage = () => {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ delay: 0.6 }}
-              className="mt-8 rounded-xl border border-destructive/20 bg-destructive/5 p-6 text-center"
+              className="mt-8 rounded-xl border border-primary/20 bg-primary/5 p-6 text-center"
             >
               <p className="font-body text-sm font-medium text-foreground">
                 If your AI system leaks data or lacks traceability, it becomes
