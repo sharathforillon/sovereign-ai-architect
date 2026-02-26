@@ -7,7 +7,7 @@ const layers = [
     id: "perimeter",
     label: "Perimeter Defence",
     icon: Shield,
-    color: "border-destructive/40 bg-destructive/5",
+    color: "border-gold-dark/40 bg-gold-dark/5",
     detail:
       "Air-Gap Gateway with hardware-enforced network isolation. All ingress/egress passes through sovereign checkpoints with deep packet inspection and anomaly detection.",
   },

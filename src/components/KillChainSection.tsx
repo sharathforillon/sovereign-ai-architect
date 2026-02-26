@@ -60,9 +60,9 @@ const stages = [
 ];
 
 const scoringRules = [
-  { score: "0", label: "Control Absent", desc: "Structural failure. Intent or claims are not evidence.", color: "text-destructive" },
-  { score: "1", label: "Present but Untested", desc: "Theoretical defense only. Tabletop exercises do not qualify.", color: "text-yellow-500" },
-  { score: "2", label: "Tested & Enforced", desc: "Forensically verified in production or identical replica.", color: "text-green-500" },
+  { score: "0", label: "Control Absent", desc: "Structural failure. Intent or claims are not evidence.", color: "text-muted-foreground" },
+  { score: "1", label: "Present but Untested", desc: "Theoretical defense only. Tabletop exercises do not qualify.", color: "text-gold-light" },
+  { score: "2", label: "Tested & Enforced", desc: "Forensically verified in production or identical replica.", color: "text-primary" },
 ];
 
 const KillChainSection = () => {
@@ -103,7 +103,7 @@ const KillChainSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 * i, duration: 0.5 }}
               className={`glass-card-hover group rounded-xl p-6 ${
-                stage.critical ? "border-destructive/20" : ""
+                stage.critical ? "border-primary/20" : ""
               }`}
             >
               <div className="mb-4 flex items-center justify-between">
@@ -121,7 +121,7 @@ const KillChainSection = () => {
                   </div>
                 </div>
                 {stage.critical && (
-                  <span className="rounded-full border border-destructive/30 bg-destructive/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-destructive">
+                  <span className="rounded-full border border-gold-dark/30 bg-gold-dark/10 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-gold-dark">
                     Critical
                   </span>
                 )}
@@ -143,8 +143,8 @@ const KillChainSection = () => {
                     {stage.evidence}
                   </p>
                 </div>
-                <div className="rounded-lg border border-destructive/10 bg-destructive/5 px-3 py-2">
-                  <span className="font-body text-[10px] font-semibold uppercase tracking-wider text-destructive">
+                <div className="rounded-lg border border-muted-foreground/10 bg-muted/30 px-3 py-2">
+                  <span className="font-body text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
                     If Absent
                   </span>
                   <p className="mt-0.5 font-body text-xs text-muted-foreground">
@@ -189,24 +189,24 @@ const KillChainSection = () => {
             Determination Logic
           </h4>
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-lg border border-destructive/20 bg-destructive/5 p-4">
-              <span className="font-display text-sm font-bold text-destructive">
-                🔴 NOT DEFENSIBLE
+            <div className="rounded-lg border border-muted-foreground/20 bg-muted/30 p-4">
+              <span className="font-display text-sm font-bold text-muted-foreground">
+                ⬛ NOT DEFENSIBLE
               </span>
               <p className="mt-1 font-body text-xs text-muted-foreground">
                 Any score of 0 in KC1, KC4, or KC6. Immediate halt required.
               </p>
             </div>
-            <div className="rounded-lg border border-yellow-500/20 bg-yellow-500/5 p-4">
-              <span className="font-display text-sm font-bold text-yellow-500">
+            <div className="rounded-lg border border-gold-dark/20 bg-gold-dark/5 p-4">
+              <span className="font-display text-sm font-bold text-gold-dark">
                 🟡 CONDITIONAL
               </span>
               <p className="mt-1 font-body text-xs text-muted-foreground">
                 Two or more scores of 1 across any stages. Sandbox or pilot only.
               </p>
             </div>
-            <div className="rounded-lg border border-green-500/20 bg-green-500/5 p-4">
-              <span className="font-display text-sm font-bold text-green-500">
+            <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
+              <span className="font-display text-sm font-bold text-primary">
                 🟢 PERMISSIBLE
               </span>
               <p className="mt-1 font-body text-xs text-muted-foreground">

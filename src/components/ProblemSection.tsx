@@ -31,7 +31,7 @@ const ProblemSection = () => {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-destructive/5 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/10 to-background" />
 
       <div ref={ref} className="relative z-10 mx-auto max-w-6xl">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -41,7 +41,7 @@ const ProblemSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-destructive">
+            <span className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               The GCC Ambition-Readiness Gap
             </span>
             <h2 className="mt-4 font-display text-3xl font-bold text-foreground md:text-4xl">
@@ -104,8 +104,8 @@ const ProblemSection = () => {
                 transition={{ delay: 0.1 * i + 0.3, duration: 0.4 }}
                 className="glass-card-hover flex items-start gap-4 rounded-xl p-5"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-destructive/20 bg-destructive/10">
-                  <factor.icon size={18} className="text-destructive" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-muted-foreground/20 bg-muted/30">
+                  <factor.icon size={18} className="text-muted-foreground" />
                 </div>
                 <p className="font-body text-sm leading-relaxed text-foreground">
                   {factor.text}
